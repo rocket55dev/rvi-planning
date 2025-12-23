@@ -1,0 +1,104 @@
+//@import '../../../assets/sass/utilities/mixins/index';
+//@import '../../../assets/sass/utilities/variables/index';
+
+.content-panel-horizontal {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Corner tag styles (can't use utility classes for custom border)
+	.corner-tag {
+		background-color: $brand-green-dark;
+		border-right: rem(9) solid rgba(255, 255, 255, 0.2);
+		font-size: rem(12);
+		letter-spacing: rem(0.84);
+	}
+
+	// Content area padding
+	.content-panel-content {
+
+		@include media(null, $md) {
+			padding-left: rem(24);
+			padding-right: rem(24);
+		}
+	}
+
+	// SVG Decorations (can't use utility classes for complex positioning)
+	.content-panel-decoration {
+		pointer-events: none;
+
+		img {
+			width: rem(935);
+			height: rem(657);
+		}
+	}
+
+	// Panel needs higher z-index than decorations (z-0)
+	.the-content-panel {
+		position: relative;
+		z-index: 1;
+
+
+		&.bg-panel-green {
+			@include media($md) {
+				box-shadow: 20px 0px 0px 0px rgba(108,164,57,1) inset;
+			}
+			.corner-tag {
+				background-color: $brand-gold;
+			}
+			h2, p, div {
+				color: $color-white;
+			}
+			ul {
+				list-style-type: square;
+
+				li {
+					color: $color-white;
+
+					&::marker {
+						color: $brand-gold;
+						font-size: rem(24);
+					}
+				}
+			}
+		}
+		&.bg-panel-teal {
+			@include media($md) {
+				box-shadow: 20px 0px 0px 0px rgba(5,157,173,1) inset;
+			}
+			.corner-tag {
+				background-color: $brand-teal-light;
+			}
+			h2, p, div {
+				color: $color-white;
+			}
+			ul {
+				list-style-type: square;
+
+				li {
+					color: $color-white;
+
+					&::marker {
+						color: $brand-gold;
+						font-size: rem(24);
+					}
+				}
+			}
+		}
+	}
+
+	.content-panel-decoration-top {
+		top: rem(-512);
+		right: rem(-540);
+	}
+
+	.content-panel-decoration-bottom {
+		bottom: rem(-204);
+		left: rem(-220);
+	}
+
+	// Image container
+	.col-md-6 {
+		img {
+			min-height: rem(400);
+		}
+	}
+}

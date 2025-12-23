@@ -1,0 +1,47 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.related-projects {
+	margin-bottom: $block-bottom-margin-large;
+
+	h2 {
+		font-family: $font-sans;
+		color: $brand-teal-dark;
+	}
+
+	.related-projects-heading {
+		font-size: rem(14);
+		letter-spacing: rem(1);
+	}
+
+	.related-projects-line {
+		border-top: 2px solid $brand-hr-rule;
+		opacity: 1;
+	}
+
+	// Project card
+	.related-projects-card-image {
+		img {
+			transition: transform 0.3s ease;
+		}
+	}
+
+	.related-projects-badge {
+		background: $brand-green-dark;
+		color: $color-white;
+		font-size: rem(12);
+		font-weight: 700;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		padding: rem(6) rem(8);
+		border-right: rem(9) solid #6ca439;
+		bottom: rem(-15);
+		left: rem(12);
+	}
+
+	.related-projects-card:hover {
+		.related-projects-card-image img {
+			transform: scale(1.05);
+		}
+	}
+}

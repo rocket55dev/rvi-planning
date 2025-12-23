@@ -1,0 +1,46 @@
+.cards-hover-panel {
+  margin-bottom: 5rem;
+}
+
+.cards-hover-panel .the-cards > .card-item:nth-child(4n+1) .hover-panel {
+  background-color: #007C89;
+}
+
+.cards-hover-panel .the-cards > .card-item:nth-child(4n+2) .hover-panel {
+  background-color: #005568;
+}
+
+.cards-hover-panel .the-cards > .card-item:nth-child(4n+3) .hover-panel {
+  background-color: #4C7329;
+}
+
+.cards-hover-panel .the-cards > .card-item:nth-child(4n+4) .hover-panel {
+  background-color: #DB731C;
+}
+
+.cards-hover-panel .hover-card:hover .hover-panel-content, .cards-hover-panel .hover-card:focus .hover-panel-content, .cards-hover-panel .hover-card.panel-open .hover-panel-content {
+  max-height: 31.25rem;
+}
+
+.cards-hover-panel .hover-panel {
+  border-top-right-radius: 1rem;
+  min-height: 6.25rem;
+}
+
+.cards-hover-panel .hover-panel h3 {
+  color: #fff;
+}
+
+.cards-hover-panel .hover-panel-content {
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.cards-hover-panel .hover-card-arrow {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: -1.5rem;
+  right: -1.5rem;
+  padding: 0.5rem 0.5625rem;
+}
+
+/*# sourceMappingURL=style.css.map*/

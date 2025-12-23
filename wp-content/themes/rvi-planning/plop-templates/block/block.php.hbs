@@ -1,0 +1,19 @@
+<?php
+	// {{ titleCase name }}
+	// Block wrapper attributes - automatically adds block class, anchor, and bottom_margin
+	$wrapper_attributes = r55_get_block_wrapper_attributes( $block );
+	// Variables
+?>
+
+<section <?php echo $wrapper_attributes; ?>>
+	<?php if(is_admin()): ?>
+		<span class="badge badge-success position-absolute mr-3 mt-3">{{titleCase name}}</span>
+	<?php endif; ?>
+	<div class="container-xl">
+		<div class="row">
+			<div class="col-12">
+				<!-- Block content goes here -->
+			</div>
+		</div>
+	</div>
+</section>

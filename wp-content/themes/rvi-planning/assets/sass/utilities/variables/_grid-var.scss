@@ -1,0 +1,38 @@
+//--------------------------------------------------------------
+// Media Query Breakpoints and Grid Options
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Grid Values – Used for general Sass/styling. Note the rem values!
+//-----------------------------------------
+$max-width: rem(1170);
+
+///-----------------------------------------
+// Breakpoints – Used for Media Query Mixins only. Note the px values!
+//-----------------------------------------
+
+/// Breakpoint for WP Admin Bar.
+$wp-admin-bar: 783px;
+
+
+///-----------------------------------------
+// Bootstrap Breakpoints
+//-----------------------------------------
+$xs: 350px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+//-----------------------------------------
+// Default width of the gutters
+// Used for padding on mobile.
+//-----------------------------------------
+$gutter: rem(20);
+
+//-----------------------------------------
+// Spacer
+// Utilized anywhere spacing is set.
+//-----------------------------------------
+$space: rem(24);

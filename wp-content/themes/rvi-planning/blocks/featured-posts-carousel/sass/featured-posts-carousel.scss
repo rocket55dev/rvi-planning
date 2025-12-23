@@ -1,0 +1,99 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.featured-posts-carousel {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Corner tag styles
+	.corner-tag {
+		background-color: $brand-green-dark;
+		border-right: rem(9) solid rgba(255, 255, 255, 0.2);
+		font-size: rem(12);
+		letter-spacing: rem(0.84);
+	}
+
+	// Slide content - height transition
+	.featured-posts-slide-content {
+		position: relative;
+		transition: height 0.4s ease;
+	}
+
+	.featured-posts-slide-item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease;
+
+		&.active {
+			position: relative;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	// Dots navigation - override Glider defaults
+	.featured-posts-dots.glider-dots {
+		justify-content: flex-end;
+		margin: 0;
+		gap: rem(4);
+
+		.glider-dot {
+			width: rem(32);
+			height: rem(4);
+			background: $brand-gray-border;
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			margin: 0;
+			cursor: pointer;
+			transition: background 0.3s ease;
+
+			&.active {
+				background: $brand-teal;
+			}
+		}
+	}
+
+	// Hide carousel until JS initializes
+	.glider-contain {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+
+		&.glider-loaded {
+			opacity: 1;
+		}
+	}
+
+	// Glider track needs full height
+	.glider-track {
+		height: 100%;
+	}
+
+	// SVG Decorations
+	.content-panel-decoration {
+		pointer-events: none;
+
+		img {
+			width: rem(935);
+			height: rem(657);
+		}
+	}
+
+	.content-panel-decoration-top {
+		top: rem(-512);
+		right: rem(-540);
+	}
+
+	.content-panel-decoration-bottom {
+		bottom: rem(-204);
+		left: rem(-220);
+	}
+
+	// Disabled button state
+	.btn.disabled {
+		opacity: 1;
+	}
+}

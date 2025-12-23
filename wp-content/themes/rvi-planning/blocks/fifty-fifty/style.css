@@ -1,0 +1,27 @@
+.fifty-fifty {
+  margin-bottom: 5rem;
+}
+
+.fifty-fifty .fifty-fifty-bg-swoosh {
+  top: -5.625rem;
+  right: 0;
+  width: auto;
+  height: 100%;
+  pointer-events: none;
+}
+
+.fifty-fifty .fifty-fifty-list {
+  list-style: square;
+  padding-left: 1.5rem;
+}
+
+.fifty-fifty .fifty-fifty-list li::marker {
+  color: #FAA41A;
+  font-size: 1.5rem;
+}
+
+.fifty-fifty .fifty-fifty-list h3 {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map*/

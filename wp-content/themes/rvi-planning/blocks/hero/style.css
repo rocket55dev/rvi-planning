@@ -1,0 +1,92 @@
+.hero {
+  margin-bottom: 5rem;
+  height: calc(100vh - 84px);
+  overflow: clip;
+}
+
+.hero .glider-track {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero .glider-slide {
+  pointer-events: auto;
+}
+
+.hero .hero-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.hero .hero-eyebrow {
+  font-size: 2rem;
+  letter-spacing: 0.125rem;
+}
+
+@media screen and (max-width: 767px) {
+  .hero .hero-eyebrow {
+    font-size: 1.25rem;
+  }
+}
+.hero h1 {
+  color: #fff;
+}
+
+.hero h1 span {
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1 span.orange::after {
+  background: #DB731C;
+}
+
+.hero h1 span.green::after {
+  background: #6CA439;
+}
+
+.hero h1 span.gold::after {
+  background: #FAA41A;
+}
+
+.hero h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.5625rem;
+  background: #007C89;
+  z-index: -1;
+}
+
+.hero .hero-scroll span {
+  font-size: 0.75rem;
+  letter-spacing: 0.125rem;
+}
+
+.hero .hero-scroll .scroll-line {
+  width: 2px;
+  height: 3rem;
+  transform-origin: top;
+  transform: scaleY(0.3);
+  opacity: 0.6;
+  animation: scrollPulse 2s ease-in-out 0.5s 1 forwards;
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: scaleY(0.3);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map*/

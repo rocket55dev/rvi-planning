@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/related-projects",
+  "title": "Related-Projects",
+  "description": "Related-Projects block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["related-projects"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "related-projects.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css"
+}

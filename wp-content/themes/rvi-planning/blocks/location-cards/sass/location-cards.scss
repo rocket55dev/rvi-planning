@@ -1,0 +1,78 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.location-cards {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Heading - matches featured-projects
+	h2 {
+		font-family: $font-sans;
+		color: $brand-teal-dark;
+	}
+
+	.location-cards-heading {
+		font-size: rem(14);
+		letter-spacing: rem(1);
+	}
+
+	.location-cards-line {
+		border-top: 2px solid $brand-hr-rule;
+		opacity: 1;
+	}
+
+	// Card hover state
+	.location-card:hover,
+	.location-card:focus-within {
+		.location-card-link-wrap {
+			max-height: rem(200);
+		}
+	}
+
+	// Image
+	.location-card-image {
+		aspect-ratio: 1/1;
+	}
+
+	// Info box
+	.location-card-info {
+		background-color: $brand-gray-bg;
+		border-top-right-radius: rem(24);
+		padding: rem(12);
+	}
+
+	// Card name
+	.location-card-name {
+		color: $brand-teal;
+	}
+
+	// Link wrapper - hidden by default, expands on hover
+	.location-card-link-wrap {
+		max-height: 0;
+		transition: max-height 0.4s ease-in-out;
+	}
+
+	.location-card-link {
+		margin-top: rem(12);
+	}
+
+	.location-card-link-text {
+		background-color: $brand-teal;
+		color: $color-white;
+		font-size: rem(12);
+		letter-spacing: rem(2);
+		padding: rem(8) rem(12);
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: rem(-32);
+			width: rem(32);
+			height: 100%;
+			background-color: $brand-teal-light;
+			background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L9 1M9 1H1M9 1V9' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}

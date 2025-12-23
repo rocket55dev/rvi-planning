@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/projects-carousel",
+  "title": "Projects-Carousel",
+  "description": "Projects-Carousel block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["projects-carousel"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "projects-carousel.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": ["file:./style.css", "gliderjs"],
+  "viewScript": "projects-carousel-script",
+  "editorScript": "projects-carousel-script"
+}

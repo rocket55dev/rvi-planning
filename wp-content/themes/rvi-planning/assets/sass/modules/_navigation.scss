@@ -1,0 +1,210 @@
+//--------------------------------------------------------------
+// Navigation
+//--------------------------------------------------------------
+
+//Global Navigation
+
+//Native Bootstrap Navigation Elements - Desktop
+.navbar {
+	.navbar-nav {
+		.nav-item {
+			border: none;
+
+			.nav-link {
+				padding: rem(10) rem(20);
+				font-family: "acumin-pro", sans-serif;
+				font-weight: 700;
+				font-style: normal;
+				color: $brand-teal;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: rem(14);
+
+				&.show {
+					&.dropdown-toggle:after {
+						border-top-color: $brand-gold!important;
+					}
+				}
+
+				&:hover, &:focus {
+					color: $brand-teal-light;
+					&.dropdown-toggle:after {
+						border-top-color: $brand-gold!important;
+					}
+				}
+			}
+
+			.dropdown-menu {
+				padding: rem(12) rem(0);
+				min-width: rem(250);
+				border-top-right-radius: 0;
+				border-bottom-left-radius: 0;
+				border: 1px solid rgba(0, 0, 0, 0.20);
+				box-shadow: 0 4px 32px 0 rgba(17, 25, 26, 0.23);
+
+				.nav-item {
+					background-color: transparent;
+					.dropdown-item {
+						font-size: rem(14);
+						font-weight: 700;
+						color: $color-text-main;
+						padding: rem(5) rem(20);
+
+						&.active {
+							background-color: transparent;
+							color: $brand-teal;
+						}
+
+						&:hover, &:focus {
+							color: $brand-teal-light;
+							background-color: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Mobile Offcanvas Navigation
+.offcanvas {
+	.offcanvas-body {
+		padding-top: rem(130);
+	}
+	.navbar-nav {
+		.nav-item {
+			border-bottom: 1px solid $brand-teal-light;
+
+			// Nested nav items (dropdowns) don't get border
+			.nav-item {
+				border: none;
+			}
+
+			.nav-link {
+				padding: rem(10) rem(20);
+				font-family: "acumin-pro", sans-serif;
+				font-weight: 700;
+				font-style: normal;
+				color: $brand-teal-light;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: rem(14);
+
+				&.show {
+					&.dropdown-toggle:after {
+						border-top-color: $brand-gold!important;
+					}
+				}
+
+				&:hover, &:focus {
+					color: $brand-teal-light;
+					&.dropdown-toggle:after {
+						border-top-color: $brand-gold!important;
+					}
+				}
+			}
+
+			.dropdown-menu {
+				position: static !important;
+				transform: none !important;
+				margin: 0;
+				padding: 0 0 rem(16);
+				min-width: rem(250);
+				border-top-right-radius: 0;
+				border-bottom-left-radius: 0;
+				border: none;
+
+				.nav-item {
+					background-color: transparent;
+					margin-bottom: rem(8);
+					.dropdown-item {
+						font-size: rem(14);
+						font-weight: 700;
+						color: $color-text-main;
+						padding: rem(5) rem(20);
+
+						&.active {
+							background-color: transparent;
+							color: $brand-teal;
+						}
+
+						&:hover, &:focus {
+							color: $brand-teal-light;
+							background-color: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Mobile Navigation
+.navbar-toggler {
+	border: none;
+	margin: 0 0 0;
+	padding: 10px;
+	right: rem(50);
+	display: block;
+
+	&:not(.collapsed) #menu-icon {
+
+		span {
+			background-color: transparent;
+		}
+
+		span:before,
+		span:after {
+			top: 8px;
+			left: 0;
+		}
+
+		span:before {
+			transform: rotate(45deg);
+		}
+
+		span:after {
+			transform: rotate(-45deg);
+		}
+
+	}
+
+	#menu-icon {
+		display: block;
+		position: relative;
+		margin: 0;
+		padding: 10px 35px 10px 0;
+		cursor: pointer;
+		visibility: visible;
+		transition: all 0.3s ease-in-out;
+		z-index: 10;
+
+		span,
+		span:before,
+		span:after {
+			display: block;
+			position: absolute;
+			height: 4px;
+			width: 35px;
+			top: 0;
+			background: $color-black;
+			border-radius: 1px;
+			cursor: pointer;
+			transition: all 500ms ease-in-out;
+			content: '';
+		}
+
+		span:before {
+			top: 8px;
+		}
+
+		span:after {
+			top: 16px;
+		}
+
+	}
+
+	// #menu-icon
+
+
+}

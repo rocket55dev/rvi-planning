@@ -1,0 +1,135 @@
+//--------------------------------------------------------------
+// Posts Archive (home.php)
+//--------------------------------------------------------------
+// .blog header {
+// 	h1 {
+// 		font-size: rem(36);
+// 		font-weight: 700;
+// 		line-height: 1.2;
+// 	}
+// }
+.loader {
+width: 48px;
+height: 48px;
+border: 5px solid $brand-gray-bg;
+border-bottom-color: $brand-teal-light;
+border-radius: 50%;
+display: inline-block;
+box-sizing: border-box;
+animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+0% {
+	transform: rotate(0deg);
+}
+100% {
+	transform: rotate(360deg);
+}
+} 
+
+.posts-filter {
+
+	// Staggered fade-in animation for post cards
+	.posts-filter-item {
+		opacity: 0;
+		transition: opacity 0.4s ease;
+
+		&.posts-filter-item--visible {
+			opacity: 1 !important;
+		}
+	}
+
+	// Category filter buttons
+	.posts-filter-category {
+		font-size: rem(12);
+		font-weight: 700;
+		letter-spacing: rem(2);
+		background: transparent;
+		color: $brand-teal;
+		border: 1px solid $brand-teal;
+		padding: rem(6) rem(8);
+		transition: all 0.2s ease;
+
+		&:hover,
+		&[aria-pressed="true"] {
+			background: $brand-teal;
+			color: $color-white;
+		}
+	}
+
+	// Card image
+	.posts-filter-card-image {
+		border-top-left-radius: rem(48);
+
+		img {
+			transition: transform 0.3s ease;
+		}
+	}
+
+	// Category badge
+	.posts-filter-badge {
+		background: $brand-green-dark;
+		color: $color-white;
+		font-size: rem(12);
+		font-weight: 700;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		padding: rem(6) rem(8);
+		border-right: rem(9) solid $brand-green;
+		bottom: rem(-15);
+		left: rem(12);
+	}
+
+	// Card content
+	a {
+		.posts-filter-excerpt {
+			color: $brand-gray-blue;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		// Meta (author + date)
+		.posts-filter-meta {
+			font-size: rem(12);
+			font-weight: 700;
+			color: $brand-gray-blue;
+		}
+	}
+
+	// Ensure consistent card heights
+	.posts-filter-card {
+		height: 100%;
+	}
+
+	.posts-filter-card-content {
+		display: flex;
+		flex-direction: column;
+
+		h3 {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	}
+
+	.posts-filter-meta {
+		margin-top: auto;
+	}
+
+	.posts-filter-dot {
+		width: rem(8);
+		height: rem(8);
+		background: $brand-green;
+	}
+
+	// Hover state
+	.posts-filter-card:hover {
+		.posts-filter-card-image img {
+			transform: scale(1.05);
+		}
+	}
+}

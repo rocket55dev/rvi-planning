@@ -1,0 +1,65 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.projects-carousel {
+	margin-bottom: $block-bottom-margin-large;
+
+	.btn.disabled {
+		opacity: 1;
+	}
+
+	.glider-contain {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+
+		&.glider-loaded {
+			opacity: 1;
+		}
+	}
+
+	.projects-carousel-card {
+		padding-right: rem(24);
+	}
+
+	.projects-carousel-card-link {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			.projects-carousel-card-image img {
+				transform: scale(1.05);
+			}
+		}
+	}
+
+	.projects-carousel-card-image {
+		border-radius: rem(42) 0 0 0;
+		aspect-ratio: 4/3;
+
+		img {
+			transition: transform 0.3s ease;
+		}
+	}
+
+	.projects-carousel-placeholder {
+		height: rem(336);
+	}
+
+	.projects-carousel-card-client,
+	.projects-carousel-card-location {
+		color: #717182;
+	}
+
+	.projects-carousel-separator {
+		width: rem(8);
+		height: rem(8);
+		background: $brand-green;
+		flex-shrink: 0;
+	}
+
+	.projects-carousel-line {
+		height: 1px;
+		background: $brand-teal-light;
+	}
+}

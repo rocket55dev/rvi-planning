@@ -1,0 +1,35 @@
+{
+  "name": "rocket55-starter",
+  "version": "1.0.0",
+  "description": "Rocket55 Starter Theme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "jquery": "^3.7.1"
+  },
+  "scripts": {
+    "watch": "nodemon --exec 'npx mix watch'",
+    "watch:simple": "mix watch",
+    "dev": "mix",
+    "build": "mix --production",
+    "build:bootstrap": "mix --production --mix-config=webpack.mix.bootstrap.js"
+  },
+  "repository": "git+https://github.com/WebDevStudios/wd_s.git",
+  "keywords": [
+    "theme"
+  ],
+  "author": "WebDevStudios",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/WebDevStudios/wd_s/issues"
+  },
+  "homepage": "https://github.com/WebDevStudios/wd_s#readme",
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.4.0",
+    "laravel-mix": "^6.0.49",
+    "nodemon": "^3.1.11",
+    "plop": "^4.0.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^12.6.0"
+  }
+}

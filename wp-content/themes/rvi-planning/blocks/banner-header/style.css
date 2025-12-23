@@ -1,0 +1,42 @@
+.banner-header {
+  margin-bottom: 5rem;
+}
+
+.banner-header .corner-tag {
+  background-color: #005568;
+  border-right: 0.5625rem solid rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+  letter-spacing: 0.0525rem;
+}
+
+.banner-header.bg-panel-teal .corner-tag {
+  background-color: #007C89;
+}
+
+.banner-header.bg-panel-teal .banner-content h1, .banner-header.bg-panel-teal .banner-content h2, .banner-header.bg-panel-teal .banner-content p, .banner-header.bg-panel-teal .banner-content div {
+  color: #fff;
+}
+
+.banner-header.bg-panel-green .corner-tag {
+  background-color: #FAA41A;
+}
+
+.banner-header.bg-panel-green .banner-content h1, .banner-header.bg-panel-green .banner-content h2, .banner-header.bg-panel-green .banner-content p, .banner-header.bg-panel-green .banner-content div {
+  color: #fff;
+}
+
+.banner-header.has-image {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-header.has-image .banner-header-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map*/

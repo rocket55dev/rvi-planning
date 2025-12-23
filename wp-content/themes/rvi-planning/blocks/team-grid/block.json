@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/team-grid",
+  "title": "Team-Grid",
+  "description": "Team-Grid block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["team-grid"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "team-grid.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css",
+  "viewScript": "team-grid-script"
+}

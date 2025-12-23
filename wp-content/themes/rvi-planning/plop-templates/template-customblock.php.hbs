@@ -1,0 +1,18 @@
+		
+			array(
+				'name'            => '{{dashCase name}}',
+				'title'           => __( '{{titleCase name}}' ),
+				'description'     => __( '{{dashCase name}} block (custom).' ),
+				'icon'            => $r55icon,
+				'category'        => 'formatting',
+				'supports'		  => [
+					'align'				=> false,
+					'anchor'			=> true,
+					'customClassName'	=> true,
+					'jsx' 				=> false,
+				],
+				'render_template' => get_template_directory() . '/blocks/{{dashCase name}}/{{dashCase name}}.php',
+				'enqueue_assets'  => function () {
+					enqueue_block_assets( '{{dashCase name}}' );
+				},
+			),

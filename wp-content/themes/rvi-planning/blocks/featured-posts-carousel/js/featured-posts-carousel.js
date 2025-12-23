@@ -1,0 +1,177 @@
+/**
+ * Featured Posts Carousel - Glider.js Implementation
+ */
+
+(function() {
+	'use strict';
+
+	// Initialize carousel
+	function initCarousel($block) {
+		const blockElement = $block || document;
+		const carousels = blockElement.querySelectorAll('.featured-posts-carousel .glider');
+
+		carousels.forEach(function(carousel) {
+			// Skip if already initialized
+			if (carousel.classList.contains('glider-initialized')) {
+				return;
+			}
+
+			const carouselId = carousel.id;
+			const prevBtn = blockElement.querySelector('.btn-carousel-prev[data-carousel="' + carouselId + '"]');
+			const nextBtn = blockElement.querySelector('.btn-carousel-next[data-carousel="' + carouselId + '"]');
+			const dotsContainer = blockElement.querySelector('#' + carouselId + '-dots');
+			const slideItems = blockElement.querySelectorAll('.featured-posts-slide-item');
+			const slideContentContainer = blockElement.querySelector('.featured-posts-slide-content');
+
+			if (!prevBtn || !nextBtn) {
+				console.warn('Featured posts carousel buttons not found for:', carouselId);
+				return;
+			}
+
+			// Mark as initialized
+			carousel.classList.add('glider-initialized');
+
+			// Initialize Glider
+			const glider = new Glider(carousel, {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				draggable: true,
+				scrollLock: true,
+				dots: dotsContainer,
+				arrows: {
+					prev: prevBtn,
+					next: nextBtn
+				}
+			});
+
+			// Show carousel after initialization
+			const gliderContain = carousel.closest('.glider-contain');
+			if (gliderContain) {
+				gliderContain.classList.add('glider-loaded');
+			}
+
+			// Update container height to match active slide
+			function updateContainerHeight(slideIndex) {
+				if (slideContentContainer && slideItems[slideIndex]) {
+					const activeItem = slideItems[slideIndex];
+					const height = activeItem.offsetHeight;
+					slideContentContainer.style.height = height + 'px';
+				}
+			}
+
+			// Sync text content with carousel slide
+			function updateSlideContent(slideIndex) {
+				slideItems.forEach(function(item, index) {
+					if (index === slideIndex) {
+						item.classList.add('active');
+					} else {
+						item.classList.remove('active');
+					}
+				});
+				updateContainerHeight(slideIndex);
+			}
+
+			// Set initial height - use multiple strategies for reliability
+			function setInitialHeight() {
+				// Use requestAnimationFrame to ensure layout is complete
+				requestAnimationFrame(function() {
+					updateContainerHeight(0);
+				});
+			}
+
+			// Try after fonts load
+			if (document.fonts && document.fonts.ready) {
+				document.fonts.ready.then(setInitialHeight);
+			}
+
+			// Also try after window load (images, etc.)
+			window.addEventListener('load', setInitialHeight);
+
+			// Recalculate on resize
+			window.addEventListener('resize', function() {
+				updateContainerHeight(glider.slide || 0);
+			});
+
+			// Fallback timeout for edge cases
+			setTimeout(setInitialHeight, 500);
+
+			// Listen for slide changes
+			carousel.addEventListener('glider-slide-visible', function(event) {
+				updateSlideContent(event.detail.slide);
+			});
+
+			// Handle disabled state for nav buttons
+			function updateButtonStates() {
+				const totalSlides = glider.slides.length;
+
+				if (glider.slide === 0) {
+					prevBtn.setAttribute('disabled', 'disabled');
+					prevBtn.setAttribute('aria-disabled', 'true');
+				} else {
+					prevBtn.removeAttribute('disabled');
+					prevBtn.setAttribute('aria-disabled', 'false');
+				}
+
+				if (glider.slide >= totalSlides - 1) {
+					nextBtn.setAttribute('disabled', 'disabled');
+					nextBtn.setAttribute('aria-disabled', 'true');
+				} else {
+					nextBtn.removeAttribute('disabled');
+					nextBtn.setAttribute('aria-disabled', 'false');
+				}
+			}
+
+			// Initial state
+			updateButtonStates();
+
+			// Update on slide change
+			carousel.addEventListener('glider-slide-visible', updateButtonStates);
+			carousel.addEventListener('glider-slide-hidden', updateButtonStates);
+			carousel.addEventListener('glider-refresh', updateButtonStates);
+		});
+	}
+
+	// Initialize when DOM is ready (front-end)
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', function() {
+			if (typeof Glider !== 'undefined') {
+				initCarousel();
+			}
+		});
+	} else {
+		if (typeof Glider !== 'undefined') {
+			initCarousel();
+		}
+	}
+
+	// Initialize in ACF block editor
+	if (window.acf) {
+		const hookNames = [
+			'render_block_preview/type=featured-posts-carousel',
+			'render_block_preview/type=acf/featured-posts-carousel',
+			'render_block_preview'
+		];
+
+		hookNames.forEach(function(hookName) {
+			window.acf.addAction(hookName, function($block) {
+				if ($block && $block[0] && $block[0].querySelector('.featured-posts-carousel')) {
+					if (typeof Glider !== 'undefined') {
+						initCarousel($block[0]);
+					}
+				}
+			});
+		});
+
+		// Also try initializing on DOM ready in editor
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', function() {
+				if (typeof Glider !== 'undefined') {
+					setTimeout(function() {
+						initCarousel();
+					}, 500);
+				}
+			});
+		}
+	}
+
+})();

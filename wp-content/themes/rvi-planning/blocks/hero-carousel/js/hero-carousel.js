@@ -1,0 +1,138 @@
+/**
+ * Hero Carousel - Glider.js Implementation with Fractional Slides (1.2)
+ */
+
+(function() {
+	'use strict';
+
+	// Initialize carousel
+	function initCarousel($block) {
+		// If $block is provided (from ACF), only initialize that block's carousel
+		// Otherwise initialize all carousels on the page
+		const blockElement = $block || document;
+		const carousels = blockElement.querySelectorAll('.hero-carousel .glider');
+
+		carousels.forEach(function(carousel) {
+			// Skip if already initialized
+			if (carousel.classList.contains('glider-initialized')) {
+				return;
+			}
+
+			const carouselId = carousel.id;
+			// Scope button selectors to the block if provided, otherwise search globally
+			const prevBtn = blockElement.querySelector('.btn-carousel-prev[data-carousel="' + carouselId + '"]');
+			const nextBtn = blockElement.querySelector('.btn-carousel-next[data-carousel="' + carouselId + '"]');
+			const dotsContainer = blockElement.querySelector('.hero-carousel-dots');
+
+			// Check if buttons and dots exist
+			if (!prevBtn || !nextBtn || !dotsContainer) {
+				console.warn('Hero carousel navigation elements not found for carousel:', carouselId);
+				return;
+			}
+
+			// Mark as initialized
+			carousel.classList.add('glider-initialized');
+
+			// Initialize Glider with fractional slides (1.2 visible at all breakpoints)
+			const glider = new Glider(carousel, {
+				slidesToShow: 1.2,
+				slidesToScroll: 1,
+				draggable: true,
+				scrollLock: true,
+				dots: dotsContainer,
+				arrows: {
+					prev: prevBtn,
+					next: nextBtn
+				}
+			});
+
+			// Show carousel after initialization to prevent CLS
+			const gliderContain = carousel.closest('.glider-contain');
+			if (gliderContain) {
+				gliderContain.classList.add('glider-loaded');
+			}
+
+			// Handle disabled state for nav buttons
+			function updateButtonStates() {
+				const totalSlides = glider.slides.length;
+				const slidesToShow = Math.floor(glider.opt.slidesToShow);
+
+				// Disable prev button if at start
+				if (glider.slide === 0) {
+					prevBtn.setAttribute('disabled', 'disabled');
+					prevBtn.setAttribute('aria-disabled', 'true');
+				} else {
+					prevBtn.removeAttribute('disabled');
+					prevBtn.setAttribute('aria-disabled', 'false');
+				}
+
+				// Disable next button if we can't scroll further right
+				// With fractional slides, check if we're at the last possible position
+				if (glider.slide >= totalSlides - slidesToShow) {
+					nextBtn.setAttribute('disabled', 'disabled');
+					nextBtn.setAttribute('aria-disabled', 'true');
+				} else {
+					nextBtn.removeAttribute('disabled');
+					nextBtn.setAttribute('aria-disabled', 'false');
+				}
+			}
+
+			// Initial state
+			updateButtonStates();
+
+			// Update on slide change
+			carousel.addEventListener('glider-slide-visible', updateButtonStates);
+			carousel.addEventListener('glider-slide-hidden', updateButtonStates);
+			carousel.addEventListener('glider-refresh', updateButtonStates);
+		});
+	}
+
+	// Initialize when DOM is ready (front-end)
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', function() {
+			if (typeof Glider !== 'undefined') {
+				initCarousel();
+			}
+		});
+	} else {
+		if (typeof Glider !== 'undefined') {
+			initCarousel();
+		}
+	}
+
+	// Initialize in ACF block editor
+	if (window.acf) {
+		// Try multiple possible hook names
+		const hookNames = [
+			'render_block_preview/type=hero-carousel',
+			'render_block_preview/type=acf/hero-carousel',
+			'render_block_preview'
+		];
+
+		hookNames.forEach(function(hookName) {
+			window.acf.addAction(hookName, function($block) {
+				// Only process hero-carousel blocks
+				if ($block && $block[0] && $block[0].querySelector('.hero-carousel')) {
+					if (typeof Glider !== 'undefined') {
+						const blockElement = $block[0];
+						initCarousel(blockElement);
+					} else {
+						console.error('Glider is not defined in editor');
+					}
+				}
+			});
+		});
+
+		// Also try initializing on DOM ready in editor
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', function() {
+				if (typeof Glider !== 'undefined') {
+					setTimeout(function() {
+						initCarousel();
+					}, 500);
+				}
+			});
+		}
+	}
+
+})();

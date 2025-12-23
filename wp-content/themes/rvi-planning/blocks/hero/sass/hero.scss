@@ -1,0 +1,105 @@
+//@import '../../../assets/sass/utilities/mixins/index';
+//@import '../../../assets/sass/utilities/variables/index';
+
+.hero {
+	margin-bottom: $block-bottom-margin-large;
+	height: calc(100vh - 84px);
+	overflow: clip;
+
+	// Disable native scrolling on the glider track
+	.glider-track {
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	// Re-enable pointer events on slide content
+	.glider-slide {
+		pointer-events: auto;
+	}
+
+	// Dark overlay gradient (can't use utility classes for gradients)
+	.hero-overlay {
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+	}
+
+	// Eyebrow custom styles
+	.hero-eyebrow {
+		font-size: 2rem;
+		letter-spacing: 0.125rem;
+
+		@include media(null, $md) {
+			font-size: 1.25rem;
+		}
+	}
+
+	// Hero heading - style h1 directly, uses global styles + block-specific overrides
+	h1 {
+		color: $color-white; // Override default teal color
+
+		// Highlighted/underlined text (pseudo-element - can't use utility classes)
+		span {
+			font-style: italic;
+			position: relative;
+			display: inline-block;
+
+			&.orange {
+				&::after {
+					background: $brand-orange;
+				}
+			}&.green {
+				&::after {
+					background: $brand-green;
+				}
+			}
+			&.gold {
+				&::after {
+					background: $brand-gold;
+				}
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: rem(25);
+				background: $brand-teal-light;
+				z-index: -1;
+			}
+		}
+	}
+
+	// Scroll indicator
+	.hero-scroll {
+		span {
+			font-size: 0.75rem;
+			letter-spacing: 0.125rem;
+		}
+
+		.scroll-line {
+			width: 2px;
+			height: rem(48);
+			transform-origin: top;
+			transform: scaleY(0.3);
+			opacity: 0.6;
+			animation: scrollPulse 2s ease-in-out 0.5s 1 forwards;
+		}
+	}
+}
+
+// Scroll line animation (fires once)
+@keyframes scrollPulse {
+	0% {
+		transform: scaleY(0.3);
+		opacity: 0.6;
+	}
+	50% {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}

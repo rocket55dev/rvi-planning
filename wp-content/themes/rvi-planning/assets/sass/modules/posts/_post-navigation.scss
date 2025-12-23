@@ -1,0 +1,44 @@
+//--------------------------------------------------------------
+// Navigation on Comment, Post and Posts.
+//--------------------------------------------------------------
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	margin-left: auto;
+	margin-right: auto;
+
+	.nav-links {
+		display: flex;
+		flex: 0 0 100%;
+		flex-flow: row wrap;
+		width: 100%; // For IE11.
+	} // .nav-links
+
+	.site-main & {
+		overflow: hidden;
+	} // .site-main &
+
+	.nav-previous {
+		width: 50%;
+		margin-right: auto;
+	} // &.nav-previous
+
+	.nav-next {
+		width: 50%;
+		margin-left: auto;
+		text-align: right;
+	} // &.nav-next
+} // .comment-navigation, .posts-navigation, .post-navigation
+
+//-----------------------------------------
+// Numbered Pagination
+//-----------------------------------------
+.pagination-container {
+
+	.page-numbers {
+
+		&.current {
+			font-weight: 700;
+		} // &.current
+	} // .page-numbers
+} // .pagination-container

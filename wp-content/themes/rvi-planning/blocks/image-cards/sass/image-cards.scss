@@ -1,0 +1,38 @@
+//@import '../../../assets/sass/utilities/mixins/index';
+//@import '../../../assets/sass/utilities/variables/index';
+
+.image-cards {
+	margin-bottom: $block-bottom-margin-large;
+
+	img {
+		transition: .5s ease-in-out;
+	}
+
+	// Image card container
+	.image-card {
+		display: block;
+		height: 100%;
+		border-radius: rem(48) 0 0 0;
+		text-decoration: none;
+		transition: transform 0.3s ease;
+
+		&:hover {
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
+
+	// Dark gradient overlay
+	.image-card-overlay {
+		background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0.8) 0%,
+			rgba(0, 0, 0, 0.4) 20.673%,
+			rgba(0, 0, 0, 0) 62.019%
+		);
+	}
+	.image-card-content {
+		padding-top: rem(350)
+	}
+}

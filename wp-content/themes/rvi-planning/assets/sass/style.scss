@@ -1,0 +1,77 @@
+/*!
+Theme Name: RVI Planning - Rocket55 Starter Kit
+Theme URI: https://r55starter.rocket55dev.com
+Author: Rocket55
+Author URI: https://www.rocket55.com
+Description: Rocket55 Starter Kit
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rocket55
+Tags: custom
+
+This theme, like WordPress, is licensed under the GPL.
+
+Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
+*/
+
+//-----------------------------------------
+// Extras
+//-----------------------------------------
+//Bootstrap includes this functionality in its reboot.scss
+//@import 'vendor/sanitize/sanitize';
+//only include animate if it is needed in your project!
+//@import 'vendor/animate/animate';
+
+//-----------------------------------------
+// Bootstrap
+//-----------------------------------------
+// Bootstrap is now loaded separately via bootstrap-custom.scss
+// This allows faster compilation and no Bootstrap bloat in block styles
+
+//-----------------------------------------
+// Utilities
+//-----------------------------------------
+
+// Helper functions.
+@import 'utilities/functions/index';
+
+// Mixins.
+@import 'utilities/mixins/index';
+
+// Global variables.
+@import 'utilities/variables/index';
+
+// Quick Helpers.
+@import 'utilities/helpers/index';
+
+//-----------------------------------------
+// Theme Styles
+//-----------------------------------------
+
+// Global CSS resets and utilities
+* {
+	box-sizing: border-box;
+}
+
+.z-index-up {
+	z-index: 1;
+}
+
+// Global elements.
+@import 'base/index';
+
+// Layout.
+@import 'structure/index';
+
+// Modules.
+@import 'modules/index';
+
+// Plugin overrides.
+@import 'plugins/index';
+
+// Views/Pages.
+@import 'views/index';
+
+// WP Widgets.
+@import 'widgets/index';

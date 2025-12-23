@@ -1,0 +1,44 @@
+.tab-links {
+  margin-bottom: 5rem;
+}
+
+.tab-links .tab-links-intro h2 {
+  color: #005568;
+}
+
+.tab-links .tab-links-item {
+  padding: 2rem;
+  border-top-right-radius: 2.625rem;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.tab-links .tab-links-item:hover {
+  opacity: 0.9;
+}
+
+.tab-links .tab-links-item h3 {
+  color: #fff;
+}
+
+.tab-links .tab-links-item--teal {
+  background-color: #005568;
+}
+
+.tab-links .tab-links-item--teal-light {
+  background-color: #007C89;
+}
+
+.tab-links .tab-links-item--green {
+  background-color: #4C7329;
+}
+
+.tab-links .tab-links-item--gold {
+  background-color: #FAA41A;
+}
+
+.tab-links .tab-links-item--orange {
+  background-color: #DB731C;
+}
+
+/*# sourceMappingURL=style.css.map*/

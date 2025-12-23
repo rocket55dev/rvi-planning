@@ -1,0 +1,13 @@
+//--------------------------------------------------------------
+// Base Layout
+//--------------------------------------------------------------
+.bg-image {
+    background-size: cover;
+    background-position: center;
+}
+
+img:not(input) {
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}

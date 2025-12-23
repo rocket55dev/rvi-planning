@@ -1,0 +1,57 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.project-details {
+	margin-bottom: $block-bottom-margin-large;
+
+	.project-details-meta {
+		border-bottom: 1px solid $brand-gray-border;
+	}
+
+	.project-details-label {
+		font-size: rem(12);
+		letter-spacing: rem(1);
+		color: $color-dove-gray;
+	}
+
+	// Subsector tags (matches projects-filter-tag styling)
+	.project-details-tag {
+		font-size: rem(12);
+		font-weight: 700;
+		letter-spacing: rem(2);
+		background: transparent;
+		color: $brand-teal;
+		border: 1px solid $brand-teal;
+		padding: rem(6) rem(12);
+		display: inline-block;
+	}
+
+	// Awards section
+	.project-details-creek {
+		top: -100px;
+		right: 65%;
+		pointer-events: none;
+		max-width: 750px;
+	}
+
+	.project-details-awards {
+
+		.project-details-awards-header {
+			background: $brand-teal;
+			color: $color-white;
+			//font-size: rem(20);
+		}
+		ul {
+			list-style-type: square;
+
+			li {
+
+				&::marker {
+					color: $brand-gold;
+				}
+			}
+		}
+
+	}
+}
+

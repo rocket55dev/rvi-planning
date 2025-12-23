@@ -1,0 +1,85 @@
+//--------------------------------------------------------------
+// Header.
+//--------------------------------------------------------------
+.site-header {
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1055; // Above offcanvas (1045) and backdrop (1040)
+	background-color: $color-white;
+}
+
+// Custom navbar toggler (two bars / X)
+.navbar-toggler {
+	border: none;
+	padding: rem(8);
+	position: relative;
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	.toggler-bar {
+		display: block;
+		width: rem(52);
+		height: rem(8);
+		transition: transform 0.3s ease;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		&:first-child {
+			background-color: $brand-teal;
+			border-top-left-radius: rem(4);
+		}
+
+		&:last-child {
+			background-color: $brand-teal-light;
+			border-bottom-right-radius: rem(4);
+			top: rem(14); // 8px bar + 6px gap
+		}
+	}
+
+	// When menu is open (aria-expanded is updated by Bootstrap offcanvas)
+	&[aria-expanded="true"] {
+		.toggler-bar {
+			&:first-child {
+				transform: translateY(#{rem(7)}) rotate(45deg);
+			}
+
+			&:last-child {
+				transform: translateY(#{rem(-7)}) rotate(-45deg);
+			}
+		}
+	}
+}
+
+// Mobile Offcanvas Navigation
+// No backdrop (data-bs-backdrop="false"), offcanvas below header
+.offcanvas {
+	z-index: 1040; // Below header (1055) - no backdrop needed since full-screen
+
+	// Override slide animation with fade
+	&.offcanvas-start {
+		transform: translateX(0) !important; // Keep in place, don't slide
+	}
+
+	// Fade animation
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	visibility: hidden;
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.showing {
+		opacity: 0;
+		visibility: visible;
+	}
+
+	&.hiding {
+		opacity: 0;
+		visibility: visible;
+	}
+}

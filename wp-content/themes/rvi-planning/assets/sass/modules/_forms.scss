@@ -1,0 +1,21 @@
+//--------------------------------------------------------------
+// Forms
+//--------------------------------------------------------------
+
+.contact-form-container_wrapper {
+    background-color: $brand-gray-bg;
+    padding: rem(24) rem(36);
+
+    h2.gform_title {
+        background-color: $brand-green-dark;
+        border-right: rem(9) solid rgba(255, 255, 255, 0.2);
+        font-size: rem(12);
+        letter-spacing: rem(0.84);
+        font-family: $font-sans;
+        color: $color-white;
+        display: inline-block;
+        padding: rem(12) rem(18);
+        text-transform: uppercase;
+        margin-left: rem(-36);
+    }
+}

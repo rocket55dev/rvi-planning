@@ -1,0 +1,72 @@
+@charset "UTF-8";
+.location-accordion {
+  margin-bottom: 5rem;
+}
+
+.location-accordion .location-accordion-content h2 {
+  font-family: "geller-text", serif;
+  color: #005568;
+}
+
+.location-accordion .accordion-item {
+  border: none;
+  border-top-right-radius: 2.625rem !important;
+  margin-bottom: 0.25rem;
+  background-color: #F1F1F1;
+}
+
+.location-accordion .accordion-button {
+  background: transparent !important;
+  color: #2D2D36;
+  font-family: "geller-text", serif;
+  font-size: 1.5rem;
+  box-shadow: none !important;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.location-accordion .accordion-button:hover, .location-accordion .accordion-button:focus, .location-accordion .accordion-button:not(.collapsed) {
+  color: #2D2D36;
+}
+
+.location-accordion .accordion-button::after {
+  content: "+";
+  background-image: none !important;
+  font-size: 2.25rem;
+  font-weight: 300;
+  width: auto;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0.75rem;
+  transform: none;
+  flex-shrink: 0;
+}
+
+.location-accordion .accordion-button:not(.collapsed)::after {
+  content: "−";
+  transform: none;
+}
+
+.location-accordion .accordion-body {
+  color: #2D2D36;
+}
+
+.location-accordion .location-accordion-contact a {
+  color: #2D2D36;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 85, 104, 0.4);
+  text-underline-offset: 0.125rem;
+}
+
+.location-accordion .location-accordion-address p {
+  margin-bottom: 0;
+}
+
+.location-accordion .location-accordion-address a {
+  color: #2D2D36;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 85, 104, 0.4);
+  text-underline-offset: 0.125rem;
+}
+
+/*# sourceMappingURL=style.css.map*/

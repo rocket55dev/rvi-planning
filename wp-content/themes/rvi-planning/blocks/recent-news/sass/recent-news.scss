@@ -1,0 +1,64 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.recent-news {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Header
+
+	.recent-news-line {
+		border-top: 2px solid $brand-hr-rule;
+		opacity: 1;
+	}
+
+	// Card image
+	.recent-news-card-image {
+		border-top-left-radius: rem(48);
+
+		img {
+			transition: transform 0.3s ease;
+		}
+	}
+
+	// Category badge
+	.recent-news-badge {
+		background: $brand-green-dark;
+		color: $color-white;
+		font-size: rem(12);
+		font-weight: 700;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		padding: rem(6) rem(8);
+		border-right: rem(9) solid $brand-green;
+		bottom: rem(-15);
+		left: rem(12);
+	}
+
+	// Card content
+
+	a {
+		.recent-news-excerpt {
+			color: $brand-gray-blue;
+		}
+
+		// Meta (author + date)
+		.recent-news-meta {
+			font-size: rem(12);
+			font-weight: 700;
+			color: $brand-gray-blue;
+		}
+	}
+
+	.recent-news-dot {
+		width: rem(8);
+		height: rem(8);
+		background: $brand-green;
+	}
+
+	// Hover state
+	.recent-news-card:hover {
+		.recent-news-card-image img {
+			transform: scale(1.05);
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/team-carousel",
+  "title": "Team-Carousel",
+  "description": "Team-Carousel block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["team-carousel"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "team-carousel.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": ["file:./style.css", "gliderjs"],
+  "viewScript": "team-carousel-script",
+  "editorScript": "team-carousel-script"
+}

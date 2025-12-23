@@ -1,0 +1,80 @@
+.hero-carousel {
+	margin-bottom: $block-bottom-margin;
+	overflow: clip;
+
+	// designers cant handle showing disabled buttons.
+	.btn.disabled {
+		opacity: 1;
+	}
+
+	.corner-tag {
+		background-color: $brand-teal;
+		border-right: rem(9) solid $brand-teal-light;
+		font-size: rem(12);
+		letter-spacing: rem(0.84);
+
+		span {
+			background-color: $brand-gold;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			display: inline-block;
+		}
+	}
+
+	// Orange decorative SVG background
+	.hero-carousel-bg-graphic {
+		top: rem(-125);
+		right: rem(-100);
+		width: rem(600);
+		height: auto;
+		pointer-events: none;
+
+		@include media($lg) {
+			width: auto;
+			top: rem(-204);
+			right: rem(-150);
+		}
+	}
+
+	// Hide carousel until JS initializes to prevent CLS
+	.glider-contain {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+
+		&.glider-loaded {
+			opacity: 1;
+		}
+	}
+
+	// Carousel slides - add gutter/gap
+	.hero-carousel-slide {
+		padding-right: rem(24);
+	}
+
+	// Pagination dots (rectangles)
+	.hero-carousel-dots {
+		margin: 0 !important; // Override Glider's auto margin
+		margin-left: auto!important; // Align to right
+
+		// Glider generates buttons with class 'glider-dot'
+		button {
+			width: rem(40);
+			height: rem(4);
+			background: $brand-hr-rule;
+			border: none;
+			cursor: pointer;
+			transition: background 0.3s ease;
+			padding: 0;
+			border-radius: 0;
+
+			&:hover {
+				background: $brand-teal;
+			}
+
+			&.active {
+				background: $brand-teal-light;
+			}
+		}
+	}
+}

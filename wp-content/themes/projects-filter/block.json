@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/projects-filter",
+  "title": "Projects-Filter",
+  "description": "Filterable projects grid by sector with Ajax load more",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["projects", "filter", "grid", "ajax"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "projects-filter.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css",
+  "viewScript": "projects-filter-script",
+  "editorScript": "projects-filter-script"
+}

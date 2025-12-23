@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/project-details",
+  "title": "Project-Details",
+  "description": "Project-Details block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["project-details"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "project-details.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css"
+}

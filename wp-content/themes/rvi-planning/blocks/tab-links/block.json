@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/tab-links",
+  "title": "Tab-Links",
+  "description": "Tab-Links block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["tab-links"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "tab-links.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css"
+}

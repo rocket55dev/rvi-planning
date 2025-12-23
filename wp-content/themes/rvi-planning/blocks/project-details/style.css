@@ -1,0 +1,46 @@
+.project-details {
+  margin-bottom: 5rem;
+}
+
+.project-details .project-details-meta {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-details .project-details-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.0625rem;
+  color: #666;
+}
+
+.project-details .project-details-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  background: transparent;
+  color: #005568;
+  border: 1px solid #005568;
+  padding: 0.375rem 0.75rem;
+  display: inline-block;
+}
+
+.project-details .project-details-creek {
+  top: -100px;
+  right: 65%;
+  pointer-events: none;
+  max-width: 750px;
+}
+
+.project-details .project-details-awards .project-details-awards-header {
+  background: #005568;
+  color: #fff;
+}
+
+.project-details .project-details-awards ul {
+  list-style-type: square;
+}
+
+.project-details .project-details-awards ul li::marker {
+  color: #FAA41A;
+}
+
+/*# sourceMappingURL=style.css.map*/

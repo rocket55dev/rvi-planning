@@ -1,0 +1,56 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.banner-header {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Corner tag styles (can't use utility classes for custom border)
+	.corner-tag {
+		background-color: $brand-teal;
+		border-right: rem(9) solid rgba(255, 255, 255, 0.2);
+		font-size: rem(12);
+		letter-spacing: rem(0.84);
+	}
+
+	// Teal background variant
+	&.bg-panel-teal {
+		.corner-tag {
+			background-color: $brand-teal-light;
+		}
+
+		.banner-content {
+			h1, h2, p, div {
+				color: $color-white;
+			}
+		}
+	}
+
+	// Green background variant
+	&.bg-panel-green {
+		.corner-tag {
+			background-color: $brand-gold;
+		}
+
+		.banner-content {
+			h1, h2, p, div {
+				color: $color-white;
+			}
+		}
+	}
+
+	// Image variant - edge bleeding to right
+	&.has-image {
+		position: relative;
+
+		.banner-header-image {
+			@include media($md) {
+				// Position absolute - right half to viewport edge, full height
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 50%;
+			}
+		}
+	}
+}

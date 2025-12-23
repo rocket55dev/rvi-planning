@@ -1,0 +1,41 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.hero-inner {
+	padding: rem(50) 0 rem(60);
+	margin-bottom: $block-bottom-margin-large;
+
+	// Gradient overlay on background image
+	.hero-inner-overlay {
+		background: linear-gradient(
+				210deg,
+				rgba(0, 0, 0, 0) 36%,
+				rgba(0, 0, 0, 0.5) 66%
+			),
+			linear-gradient(
+				180deg,
+				rgba(22, 33, 20, 0) 0%,
+				rgba(22, 33, 20, 0.2) 100%
+			);
+	}
+
+	h1 {
+		color: $color-white;
+	}
+
+	// Corner tag - reused from hero-carousel
+	.corner-tag {
+		background-color: $brand-teal;
+		border-right: rem(9) solid $brand-teal-light;
+		font-size: rem(12);
+		letter-spacing: rem(0.84);
+
+		.dot {
+			background-color: $brand-gold;
+			width: rem(6);
+			height: rem(6);
+			border-radius: 50%;
+			display: inline-block;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "watch": ["blocks/*/block.json"],
+  "exec": "npx mix watch",
+  "events": {
+    "restart": "echo '\n🔄 New block detected, restarting Mix...\n'"
+  }
+}

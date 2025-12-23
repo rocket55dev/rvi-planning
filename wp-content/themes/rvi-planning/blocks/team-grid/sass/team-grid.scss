@@ -1,0 +1,78 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.team-grid {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Fade-in animation for items
+	.team-grid-item {
+		opacity: 0;
+		transition: opacity 0.4s ease;
+
+		&.team-grid-item--visible {
+			opacity: 1;
+		}
+	}
+
+	// Card structure - hover state
+	.team-grid-card:hover,
+	.team-grid-card:focus-within {
+		.team-grid-contact-wrap {
+			max-height: rem(200);
+		}
+	}
+
+	// Image (normal flow)
+	.team-grid-card-image {
+		aspect-ratio: 1/1;
+	}
+
+	// Info box
+	.team-grid-card-info {
+		background-color: $brand-gray-bg;
+		border-top-right-radius: rem(24);
+		padding: rem(12);
+	}
+
+	// Card content
+	.team-grid-card-name {
+		color: $brand-teal;
+	}
+
+	.team-grid-card-position,
+	.team-grid-card-location {
+		color: #717182;
+		font-size: rem(14);
+	}
+
+	// Contact link wrapper - hidden by default, expands on hover
+	.team-grid-contact-wrap {
+		max-height: 0;
+		transition: max-height 0.4s ease-in-out;
+	}
+
+	.team-grid-contact-link {
+		margin-top: rem(12);
+	}
+
+	.team-grid-contact-text {
+		background-color: $brand-teal;
+		color: $color-white;
+		font-size: rem(12);
+		letter-spacing: rem(2);
+		padding: rem(8) rem(12);
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: rem(-32);
+			width: rem(32);
+			height: 100%;
+			background-color: $brand-teal-light;
+			background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L9 1M9 1H1M9 1V9' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}

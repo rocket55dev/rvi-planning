@@ -1,0 +1,66 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.team-carousel {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Designers cant handle showing disabled buttons. Booooo.
+	.btn.disabled {
+		opacity: 1;
+	}
+
+	// Hide carousel until JS initializes to prevent CLS
+	.glider-contain {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+
+		&.glider-loaded {
+			opacity: 1;
+		}
+	}
+
+	// Carousel cards
+	.team-carousel-card {
+		padding-right: rem(24);
+	}
+
+	.team-carousel-card-image {
+		border-radius: rem(42) 0 0 0;
+		aspect-ratio: 4/3;
+	}
+
+	.team-carousel-placeholder {
+		height: rem(336);
+	}
+
+
+	.team-carousel-card-title,
+	.team-carousel-card-location {
+		color: #717182; // Gray-blue from design
+	}
+
+	.team-carousel-separator {
+		width: rem(8);
+		height: rem(8);
+		background: $brand-green; // Green from design
+		flex-shrink: 0;
+	}
+
+	.team-carousel-line {
+		//width: 100%;
+		height: 1px;
+		background: $brand-teal-light;
+		position: relative;
+
+		// &::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	left: 0;
+		// 	right: 0;
+		// 	top: 50%;
+		// 	transform: translateY(-50%);
+		// 	height: 1px;
+		// 	background: $brand-teal-light;
+		// }
+	}
+}

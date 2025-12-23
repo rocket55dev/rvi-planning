@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/hero-carousel",
+  "title": "Hero-Carousel",
+  "description": "Hero-Carousel block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["hero-carousel"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "hero-carousel.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": ["file:./style.css", "gliderjs"],
+  "viewScript": "hero-carousel-script",
+  "editorScript": "hero-carousel-script"
+}

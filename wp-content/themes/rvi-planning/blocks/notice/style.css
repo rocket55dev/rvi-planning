@@ -1,0 +1,21 @@
+.legal-notice {
+  margin-bottom: 5rem;
+}
+
+.legal-notice h2 {
+  font-family: "acumin-pro", sans-serif;
+  color: #011F26;
+  background-color: #fff;
+}
+
+.legal-notice .notice-heading {
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+}
+
+.legal-notice .notice-line {
+  border-top: 2px solid #99C9D6;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map*/

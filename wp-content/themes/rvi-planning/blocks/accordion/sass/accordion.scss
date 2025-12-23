@@ -1,0 +1,80 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.accordion-panel {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Creek decoration
+	.accordion-decoration {
+		bottom: rem(150);
+		left: rem(-312);
+		pointer-events: none;
+	}
+
+	// Accordion items - override Bootstrap defaults
+	.accordion-item {
+		border: none;
+		border-top-right-radius: rem(42)!important;
+		margin-bottom: rem(4);
+
+		// Color variants
+		&.accordion-teal {
+			background-color: $brand-teal;
+		}
+
+		&.accordion-green {
+			background-color: $brand-green-dark;
+		}
+
+		&.accordion-teal-light {
+			background-color: $brand-teal-light;
+		}
+
+		&.accordion-orange {
+			background-color: $brand-orange;
+		}
+	}
+
+	// Accordion button (header)
+	.accordion-button {
+		background: transparent !important;
+		color: $color-white;
+		//padding: rem(10) rem(24);
+		font-family: $font-headings;
+		font-size: rem(24);
+		box-shadow: none !important;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+
+		&:hover,
+		&:focus,
+		&:not(.collapsed) {
+			color: $color-white;
+		}
+
+		// Remove default Bootstrap icon
+		&::after {
+			content: '+';
+			background-image: none !important;
+			font-size: rem(36);
+			font-weight: 300;
+			width: auto;
+			height: auto;
+			margin-left: 0;
+			margin-right: rem(12);
+			transform: none;
+			flex-shrink: 0;
+		}
+
+		&:not(.collapsed)::after {
+			content: '−';
+			transform: none;
+		}
+	}
+
+	// Accordion body
+	.accordion-body {
+		color: $color-white;
+		padding: 0 rem(32) rem(32) rem(64);
+	}
+}

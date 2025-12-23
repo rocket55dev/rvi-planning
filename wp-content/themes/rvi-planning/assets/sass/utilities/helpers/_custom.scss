@@ -1,0 +1,50 @@
+//--------------------------------------------------------------
+// Custom Helpers
+//--------------------------------------------------------------
+
+//--------------------------------------------------------------
+// Panel Background Colors
+//--------------------------------------------------------------
+
+.bg-panel-gray {
+	background-color: $brand-gray-bg;
+}
+
+.bg-panel-green {
+	background-color: $brand-green-dark;
+}
+
+.bg-panel-teal {
+	background-color: $brand-teal;
+}
+
+.overflow-x-clip {
+	overflow-x: clip!important;
+}
+.overflow-y-clip {
+	overflow-y: clip!important;
+}
+
+//special container that aligns left edge at xl and xxl breakpoints
+.container-xl-left {
+  margin-right: 0;
+  max-width: none;
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-right: var(--bs-gutter-x, 0.75rem);
+
+  // Below xl breakpoint, behave like a regular container
+  @include media(null, $xl) {
+    margin-left: auto;
+  }
+
+  // At xl breakpoint (1200px+), align left edge with container-xl
+  @include media($xl) {
+    margin-left: calc((100vw - 1140px) / 2);
+    padding-right: 0;
+  }
+
+  // At xxl breakpoint (1400px+), align left edge with container-xl
+  @include media($xxl) {
+    margin-left: calc((100vw - 1320px) / 2);
+  }
+}

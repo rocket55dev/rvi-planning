@@ -1,0 +1,29 @@
+.image-cards {
+  margin-bottom: 5rem;
+}
+
+.image-cards img {
+  transition: 0.5s ease-in-out;
+}
+
+.image-cards .image-card {
+  display: block;
+  height: 100%;
+  border-radius: 3rem 0 0 0;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.image-cards .image-card:hover img {
+  transform: scale(1.05);
+}
+
+.image-cards .image-card-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 20.673%, rgba(0, 0, 0, 0) 62.019%);
+}
+
+.image-cards .image-card-content {
+  padding-top: 21.875rem;
+}
+
+/*# sourceMappingURL=style.css.map*/

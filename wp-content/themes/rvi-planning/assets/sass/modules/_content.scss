@@ -1,0 +1,44 @@
+//--------------------------------------------------------------
+// Site Content
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Posts and Pages
+//-----------------------------------------
+
+// Corner tag - reusable component
+.corner-tag {
+	background-color: $brand-teal;
+	border-right: rem(9) solid $brand-teal-light;
+	font-size: rem(12);
+	letter-spacing: rem(0.84);
+
+	a {
+		color: $color-white;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-white;
+			text-decoration: underline;
+		}
+	}
+}
+
+// Edit link
+.edit-link {
+	margin: 0 0 0 rem(5);
+
+	a {
+		display: inline-block;
+		font-size: rem(12);
+		text-transform: lowercase;
+
+		&::before {
+			content: '(';
+		}
+
+		&::after {
+			content: ')';
+		}
+	} // a
+} // .edit-link

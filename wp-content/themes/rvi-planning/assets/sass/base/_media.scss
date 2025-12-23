@@ -1,0 +1,168 @@
+// --------------------------------------------------------------
+// Media
+// --------------------------------------------------------------
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+// Page, Entry and Comment Content
+.page-content,
+.entry-content,
+.comment-content {
+	// WP smiley
+	.wp-smiley {
+		margin: 0;
+		padding: 0;
+
+		border: none;
+	} // img.wp-smiley
+} // .page-content, .entry-content, .comment-content
+
+// --------------------------------------------------------------
+// Images
+// --------------------------------------------------------------
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+// --------------------------------------------------------------
+// Captions
+// --------------------------------------------------------------
+
+// Image captions
+.wp-caption {
+	margin: 0 0 $space;
+	max-width: 100%;
+
+	img[class*='wp-image-'] {
+		margin: 0 auto;
+
+		display: block;
+	} // img[class*="wp-image-"]
+
+	// Add auto margins so image is centered
+	&.aligncenter {
+		margin: 0 auto $space auto;
+	} // &.aligncenter
+
+	// Add a margin right to left-aligned images with captions
+	&.alignleft {
+		margin-right: $space;
+	} // &.alignleft
+
+	// Add a margin left to right-aligned images with captions
+	&.alignright {
+		margin-left: $space;
+	} // &.alignright
+
+	// Add top and bottom margin to caption text
+	.wp-caption-text {
+		text-align: left;
+		background-color: $brand-gray-bg;
+		padding: rem(24);
+		margin-bottom: rem(24);
+	} // .wp-caption-text
+} // .wp-caption
+
+// Image caption text
+.wp-caption-text {
+	text-align: center;
+} // .wp-caption-text
+
+figure.wp-block-image.alignnone {
+	//margin:0 auto;
+	//max-width: rem(900);
+	width: 100%;
+	padding-top: rem(16);
+
+	img {
+		width: 100%;
+		filter: brightness(.98);
+	}
+	.wp-element-caption {
+		text-align: left;
+		background-color: $brand-gray-bg;
+		padding: rem(12) rem(16);
+		margin: 0 0 rem(30);
+		font-weight: bold;
+	}
+}
+
+// --------------------------------------------------------------
+// Galleries
+// --------------------------------------------------------------
+
+// Gallery
+.gallery {
+	margin: 0 0 $space;
+} // .gallery
+
+// Gallery items
+.gallery-item {
+
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+
+	.gallery-columns-2 & {
+		max-width: 50%;
+	} // .gallery-columns-2 &
+
+	.gallery-columns-3 & {
+		max-width: 33.33%;
+	} // .gallery-columns-3 &
+
+	.gallery-columns-4 & {
+		max-width: 25%;
+	} // .gallery-columns-4 &
+
+	.gallery-columns-5 & {
+		max-width: 20%;
+	} // .gallery-columns-5 &
+
+	.gallery-columns-6 & {
+		max-width: 16.66%;
+	} // .gallery-columns-6 &
+
+	.gallery-columns-7 & {
+		max-width: 14.28%;
+	} // .gallery-columns-7 &
+
+	.gallery-columns-8 & {
+		max-width: 12.5%;
+	} // .gallery-columns-8 &
+
+	.gallery-columns-9 & {
+		max-width: 11.11%;
+	} // .gallery-columns-9 &
+} // .gallery-item
+
+// Gallery caption
+.gallery-caption {
+	display: block;
+} // .gallery-caption
+
+// Image as background
+.image-background {
+	object-position: center center;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+} // .image-background
+
+// IE/Edge hacks.
+.ie .video-background,
+.edge .video-background {
+	height: auto;
+} // .ie .video-background
+
+// svg defs
+.svg-defs {
+	display: none;
+} // .svg-defs

@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------------
+// Breakpoints
+// ----------------------------------------------------------------------
+
+// Media query mixin
+// Usage:
+//   @include media($md) { }              // min-width: 768px
+//   @include media(null, $md) { }        // max-width: 767px
+//   @include media($sm, $lg) { }         // 576px to 991px
+@mixin media($min: null, $max: null) {
+    // Both min and max (range)
+    @if $min != null and $max != null {
+        @media only screen and (min-width: #{$min}) and (max-width: #{$max - 1px}) {
+            @content;
+        }
+    }
+    // Only max-width
+    @else if $max != null {
+        @media only screen and (max-width: #{$max - 1px}) {
+            @content;
+        }
+    }
+    // Only min-width
+    @else if $min != null {
+        @media only screen and (min-width: #{$min}) {
+            @content;
+        }
+    }
+}

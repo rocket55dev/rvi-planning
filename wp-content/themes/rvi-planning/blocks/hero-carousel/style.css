@@ -1,0 +1,77 @@
+.hero-carousel {
+  margin-bottom: 3.5rem;
+  overflow: clip;
+}
+
+.hero-carousel .btn.disabled {
+  opacity: 1;
+}
+
+.hero-carousel .corner-tag {
+  background-color: #005568;
+  border-right: 0.5625rem solid #007C89;
+  font-size: 0.75rem;
+  letter-spacing: 0.0525rem;
+}
+
+.hero-carousel .corner-tag span {
+  background-color: #FAA41A;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hero-carousel .hero-carousel-bg-graphic {
+  top: -7.8125rem;
+  right: -6.25rem;
+  width: 37.5rem;
+  height: auto;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 992px) {
+  .hero-carousel .hero-carousel-bg-graphic {
+    width: auto;
+    top: -12.75rem;
+    right: -9.375rem;
+  }
+}
+.hero-carousel .glider-contain {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hero-carousel .glider-contain.glider-loaded {
+  opacity: 1;
+}
+
+.hero-carousel .hero-carousel-slide {
+  padding-right: 1.5rem;
+}
+
+.hero-carousel .hero-carousel-dots {
+  margin: 0 !important;
+  margin-left: auto !important;
+}
+
+.hero-carousel .hero-carousel-dots button {
+  width: 2.5rem;
+  height: 0.25rem;
+  background: #99C9D6;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  padding: 0;
+  border-radius: 0;
+}
+
+.hero-carousel .hero-carousel-dots button:hover {
+  background: #005568;
+}
+
+.hero-carousel .hero-carousel-dots button.active {
+  background: #007C89;
+}
+
+/*# sourceMappingURL=style.css.map*/

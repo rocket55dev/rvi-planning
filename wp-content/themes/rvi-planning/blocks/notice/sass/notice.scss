@@ -1,0 +1,23 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.legal-notice {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Heading - matches featured-projects
+	h2 {
+		font-family: $font-sans;
+		color: $brand-teal-dark;
+		background-color: $color-white;
+	}
+
+	.notice-heading {
+		font-size: rem(14);
+		letter-spacing: rem(1);
+	}
+
+	.notice-line {
+		border-top: 2px solid $brand-hr-rule;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/hero",
+  "title": "Hero",
+  "description": "Hero block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["hero"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "hero.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": ["file:./style.css", "gliderjs"],
+  "viewScript": "hero-script",
+  "editorScript": "hero-script"
+}

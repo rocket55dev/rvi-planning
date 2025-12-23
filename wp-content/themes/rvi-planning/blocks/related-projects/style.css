@@ -1,0 +1,41 @@
+.related-projects {
+  margin-bottom: 5rem;
+}
+
+.related-projects h2 {
+  font-family: "acumin-pro", sans-serif;
+  color: #011F26;
+}
+
+.related-projects .related-projects-heading {
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+}
+
+.related-projects .related-projects-line {
+  border-top: 2px solid #99C9D6;
+  opacity: 1;
+}
+
+.related-projects .related-projects-card-image img {
+  transition: transform 0.3s ease;
+}
+
+.related-projects .related-projects-badge {
+  background: #4C7329;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  padding: 0.375rem 0.5rem;
+  border-right: 0.5625rem solid #6ca439;
+  bottom: -0.9375rem;
+  left: 0.75rem;
+}
+
+.related-projects .related-projects-card:hover .related-projects-card-image img {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=style.css.map*/

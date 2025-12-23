@@ -1,0 +1,98 @@
+.content-panel-horizontal {
+  margin-bottom: 5rem;
+}
+
+.content-panel-horizontal .corner-tag {
+  background-color: #4C7329;
+  border-right: 0.5625rem solid rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+  letter-spacing: 0.0525rem;
+}
+
+@media screen and (max-width: 767px) {
+  .content-panel-horizontal .content-panel-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.content-panel-horizontal .content-panel-decoration {
+  pointer-events: none;
+}
+
+.content-panel-horizontal .content-panel-decoration img {
+  width: 58.4375rem;
+  height: 41.0625rem;
+}
+
+.content-panel-horizontal .the-content-panel {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .content-panel-horizontal .the-content-panel.bg-panel-green {
+    box-shadow: 20px 0px 0px 0px rgb(108, 164, 57) inset;
+  }
+}
+.content-panel-horizontal .the-content-panel.bg-panel-green .corner-tag {
+  background-color: #FAA41A;
+}
+
+.content-panel-horizontal .the-content-panel.bg-panel-green h2, .content-panel-horizontal .the-content-panel.bg-panel-green p, .content-panel-horizontal .the-content-panel.bg-panel-green div {
+  color: #fff;
+}
+
+.content-panel-horizontal .the-content-panel.bg-panel-green ul {
+  list-style-type: square;
+}
+
+.content-panel-horizontal .the-content-panel.bg-panel-green ul li {
+  color: #fff;
+}
+
+.content-panel-horizontal .the-content-panel.bg-panel-green ul li::marker {
+  color: #FAA41A;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .content-panel-horizontal .the-content-panel.bg-panel-teal {
+    box-shadow: 20px 0px 0px 0px rgb(5, 157, 173) inset;
+  }
+}
+.content-panel-horizontal .the-content-panel.bg-panel-teal .corner-tag {
+  background-color: #007C89;
+}
+
+.content-panel-horizontal .the-content-panel.bg-panel-teal h2, .content-panel-horizontal .the-content-panel.bg-panel-teal p, .content-panel-horizontal .the-content-panel.bg-panel-teal div {
+  color: #fff;
+}
+
+.content-panel-horizontal .the-content-panel.bg-panel-teal ul {
+  list-style-type: square;
+}
+
+.content-panel-horizontal .the-content-panel.bg-panel-teal ul li {
+  color: #fff;
+}
+
+.content-panel-horizontal .the-content-panel.bg-panel-teal ul li::marker {
+  color: #FAA41A;
+  font-size: 1.5rem;
+}
+
+.content-panel-horizontal .content-panel-decoration-top {
+  top: -32rem;
+  right: -33.75rem;
+}
+
+.content-panel-horizontal .content-panel-decoration-bottom {
+  bottom: -12.75rem;
+  left: -13.75rem;
+}
+
+.content-panel-horizontal .col-md-6 img {
+  min-height: 25rem;
+}
+
+/*# sourceMappingURL=style.css.map*/

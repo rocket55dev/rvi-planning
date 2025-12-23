@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/alternating-content/style.css","mappings":"AAAA;EACE;AACF,C","sources":["webpack://rocket55-starter/./blocks/alternating-content/sass/alternating-content.scss"],"sourcesContent":[".alternating-content {\n  margin-bottom: 5rem;\n}"],"names":[],"sourceRoot":""}

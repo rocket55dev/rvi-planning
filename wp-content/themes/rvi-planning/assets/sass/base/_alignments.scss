@@ -1,0 +1,38 @@
+//--------------------------------------------------------------
+// Alignments
+//--------------------------------------------------------------
+
+// Left Align
+.alignleft {
+	margin: 0 $space 0 0;
+
+	display: block;
+	float: left;
+} // .alignleft
+
+// Right Align
+.alignright {
+	margin: 0 0 0 $space;
+
+	display: block;
+	float: right;
+} // .alignright
+
+// Center Align
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+
+	display: block;
+} // .aligncenter
+
+// Full-width Gutenberg alignment.
+.alignfull {
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/accordion-panel",
+  "title": "Accordion",
+  "description": "Accordion block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["accordion"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "accordion.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css"
+}

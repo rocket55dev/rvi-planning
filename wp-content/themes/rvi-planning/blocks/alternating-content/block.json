@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/alternating-content",
+  "title": "Alternating Content",
+  "description": "A block with alternating content and image layout",
+  "category": "theme",
+  "icon": "align-pull-left",
+  "keywords": ["alternating", "content", "image", "layout"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "alternating-content.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css",
+  "example": {
+    "viewportWidth": 1200,
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "content_position": "left",
+        "content": "<h2>A really long motherfucking Sample Heading motherfucker</h2><p>Sample content text.</p>",
+        "content_size": "half"
+      }
+    }
+  }
+}

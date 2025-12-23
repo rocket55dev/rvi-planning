@@ -1,0 +1,29 @@
+.hero-inner {
+  padding: 3.125rem 0 3.75rem;
+  margin-bottom: 5rem;
+}
+
+.hero-inner .hero-inner-overlay {
+  background: linear-gradient(210deg, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0.5) 66%), linear-gradient(180deg, rgba(22, 33, 20, 0) 0%, rgba(22, 33, 20, 0.2) 100%);
+}
+
+.hero-inner h1 {
+  color: #fff;
+}
+
+.hero-inner .corner-tag {
+  background-color: #005568;
+  border-right: 0.5625rem solid #007C89;
+  font-size: 0.75rem;
+  letter-spacing: 0.0525rem;
+}
+
+.hero-inner .corner-tag .dot {
+  background-color: #FAA41A;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map*/

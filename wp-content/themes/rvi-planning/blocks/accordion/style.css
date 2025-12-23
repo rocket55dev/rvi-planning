@@ -1,0 +1,71 @@
+@charset "UTF-8";
+.accordion-panel {
+  margin-bottom: 5rem;
+}
+
+.accordion-panel .accordion-decoration {
+  bottom: 9.375rem;
+  left: -19.5rem;
+  pointer-events: none;
+}
+
+.accordion-panel .accordion-item {
+  border: none;
+  border-top-right-radius: 2.625rem !important;
+  margin-bottom: 0.25rem;
+}
+
+.accordion-panel .accordion-item.accordion-teal {
+  background-color: #005568;
+}
+
+.accordion-panel .accordion-item.accordion-green {
+  background-color: #4C7329;
+}
+
+.accordion-panel .accordion-item.accordion-teal-light {
+  background-color: #007C89;
+}
+
+.accordion-panel .accordion-item.accordion-orange {
+  background-color: #DB731C;
+}
+
+.accordion-panel .accordion-button {
+  background: transparent !important;
+  color: #fff;
+  font-family: "geller-text", serif;
+  font-size: 1.5rem;
+  box-shadow: none !important;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.accordion-panel .accordion-button:hover, .accordion-panel .accordion-button:focus, .accordion-panel .accordion-button:not(.collapsed) {
+  color: #fff;
+}
+
+.accordion-panel .accordion-button::after {
+  content: "+";
+  background-image: none !important;
+  font-size: 2.25rem;
+  font-weight: 300;
+  width: auto;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0.75rem;
+  transform: none;
+  flex-shrink: 0;
+}
+
+.accordion-panel .accordion-button:not(.collapsed)::after {
+  content: "−";
+  transform: none;
+}
+
+.accordion-panel .accordion-body {
+  color: #fff;
+  padding: 0 2rem 2rem 4rem;
+}
+
+/*# sourceMappingURL=style.css.map*/

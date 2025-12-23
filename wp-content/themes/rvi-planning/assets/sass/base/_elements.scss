@@ -1,0 +1,35 @@
+//--------------------------------------------------------------
+// HTML Elements
+//--------------------------------------------------------------
+@view-transition {
+  navigation: auto;
+}
+//-----------------------------------------
+// Iframes
+//-----------------------------------------
+embed,
+iframe,
+object {
+	max-width: 100%;
+} // embed, iframe, object
+
+hr {
+	background-color: $color-background-hr;
+	border: 0;
+} // hr
+
+figure {
+	margin: 0;
+} // figure
+
+// Disabled type styles in boostrap so moved this here.
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+ul, ol {
+	margin-bottom: rem(24);
+	li {
+		margin-bottom: rem(5);
+	}
+}

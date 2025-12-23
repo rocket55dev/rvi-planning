@@ -1,0 +1,62 @@
+.projects-carousel {
+  margin-bottom: 5rem;
+}
+
+.projects-carousel .btn.disabled {
+  opacity: 1;
+}
+
+.projects-carousel .glider-contain {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projects-carousel .glider-contain.glider-loaded {
+  opacity: 1;
+}
+
+.projects-carousel .projects-carousel-card {
+  padding-right: 1.5rem;
+}
+
+.projects-carousel .projects-carousel-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects-carousel .projects-carousel-card-link:hover .projects-carousel-card-image img {
+  transform: scale(1.05);
+}
+
+.projects-carousel .projects-carousel-card-image {
+  border-radius: 2.625rem 0 0 0;
+  aspect-ratio: 4/3;
+}
+
+.projects-carousel .projects-carousel-card-image img {
+  transition: transform 0.3s ease;
+}
+
+.projects-carousel .projects-carousel-placeholder {
+  height: 21rem;
+}
+
+.projects-carousel .projects-carousel-card-client,
+.projects-carousel .projects-carousel-card-location {
+  color: #717182;
+}
+
+.projects-carousel .projects-carousel-separator {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #6CA439;
+  flex-shrink: 0;
+}
+
+.projects-carousel .projects-carousel-line {
+  height: 1px;
+  background: #007C89;
+}
+
+/*# sourceMappingURL=style.css.map*/

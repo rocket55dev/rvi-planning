@@ -1,0 +1,11 @@
+//--------------------------------------------------------------
+// Custom Variables
+//--------------------------------------------------------------
+
+// BLOCK BOTTOM MARGIN
+
+// this is used for blocks where columns have their own bottom margin set.
+// 80px - 24px (mb-4 class) = 56px
+$block-bottom-margin: rem(56);
+//default block margin of 80px
+$block-bottom-margin-large: rem(80);

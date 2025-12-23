@@ -1,0 +1,49 @@
+.projects-filter {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Filter tag buttons
+	.projects-filter-tag {
+		font-size: rem(12);
+		font-weight: 700;
+		letter-spacing: rem(2);
+		background: transparent;
+		color: $brand-teal;
+		border: 1px solid $brand-teal;
+		padding: rem(6) rem(8);
+		transition: all 0.2s ease;
+
+		&:hover,
+		&[aria-pressed="true"] {
+			background: $brand-teal;
+			color: $color-white;
+		}
+	}
+
+	// Project card
+	.projects-filter-card-image {
+		img {
+			transition: transform 0.3s ease;
+		}
+	}
+
+	.projects-filter-badge {
+		background: $brand-green-dark;
+		color: $color-white;
+		font-size: rem(12);
+		font-weight: 700;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		padding: rem(6) rem(8);
+		border-right: rem(9) solid #6ca439;
+		bottom: rem(-15);
+		left: rem(12);
+	}
+
+
+	.projects-filter-card:hover {
+		.projects-filter-card-image img {
+			transform: scale(1.05);
+		}
+	}
+}
+

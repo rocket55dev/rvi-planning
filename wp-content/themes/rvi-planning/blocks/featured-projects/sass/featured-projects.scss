@@ -1,0 +1,81 @@
+//@import '../../../assets/sass/utilities/mixins/index';
+//@import '../../../assets/sass/utilities/variables/index';
+
+.featured-projects {
+	margin-bottom: $block-bottom-margin-large;
+
+	h2 {
+		font-family: $font-sans;
+		color: $brand-teal-dark;
+		background-color: $color-white;
+	}
+
+	.featured-projects-heading {
+		font-size: rem(14);
+		letter-spacing: rem(1);
+	}
+
+	.featured-projects-line {
+		border-top: 2px solid $brand-hr-rule;
+		opacity: 1;
+	}
+
+	.featured-project {
+		text-decoration: none;
+		border-radius: rem(48) 0 0 0;
+		min-height: rem(400);
+
+		&:hover, &:focus {
+			.featured-project-image img {
+				transform: scale(1.05);
+			}
+
+			.featured-project-excerpt {
+				max-height: rem(300);
+				opacity: 1;
+			}
+		}
+	}
+
+	.featured-project-image {
+		height: rem(400);
+
+		img {
+			transition: transform 0.5s ease-in-out;
+		}
+	}
+
+	.featured-project-placeholder {
+		height: rem(400);
+	}
+
+	.featured-project-overlay {
+		background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0.8) 0%,
+			rgba(0, 0, 0, 0.4) 30%,
+			rgba(0, 0, 0, 0) 70%
+		);
+	}
+
+	.featured-project-content {
+		h3 {
+			color: $color-white;
+		}
+
+		.featured-project-excerpt {
+			// Show by default on mobile (no hover)
+			max-height: rem(300);
+			opacity: 1;
+			overflow: hidden;
+			transition: max-height 0.4s ease, opacity 0.4s ease;
+			color: $color-white;
+
+			// Hide on desktop, reveal on hover
+			@include media($md) {
+				max-height: 0;
+				opacity: 0;
+			}
+		}
+	}
+}

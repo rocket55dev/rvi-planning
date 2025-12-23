@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/legal-notice",
+  "title": "Notice",
+  "description": "Notice block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["notice"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "notice.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css"
+}

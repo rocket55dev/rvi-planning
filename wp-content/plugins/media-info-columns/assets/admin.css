@@ -1,0 +1,16 @@
+/**
+ * Media Info Columns - Admin Styles
+ */
+
+.column-dimensions {
+    width: 100px;
+}
+
+.column-filesize {
+    width: 80px;
+}
+
+#mic-dimension-filter {
+    float: left;
+    margin-right: 6px;
+}

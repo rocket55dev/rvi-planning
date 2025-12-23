@@ -1,0 +1,34 @@
+//--------------------------------------------------------------
+// Footer
+//--------------------------------------------------------------
+
+.site-footer {
+	background-color: $brand-gray-bg;
+
+	.nav-link {
+		color: $color-text-main;
+
+		&.active {
+			color: $brand-teal;
+		}
+	}
+	.social-links {
+		svg {
+			width: rem(20);
+			fill: $brand-teal-dark;
+		}
+	}
+}
+.footer-creek-img {
+	bottom: rem(-50);
+}
+.newsletter.form {
+	.btn.btn-primary.btn-clipped {
+		border-top-right-radius: 0;
+		width: 100%;
+		/* border-bottom-left-radius: 1.25rem; */
+		/* border-bottom-right-radius: 1.25rem; */
+		margin-top: 12px;
+	}
+}
+

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/cards-hover-panel",
+  "title": "Cards-Hover-Panel",
+  "description": "Cards-Hover-Panel block",
+  "category": "theme",
+  "icon": "admin-customizer",
+  "keywords": ["cards-hover-panel"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "cards-hover-panel.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "customClassName": true,
+    "jsx": true
+  },
+  "style": "file:./style.css",
+  "viewScript": "file:./js/cards-hover-panel.min.js",
+  "editorScript": "file:./js/cards-hover-panel.min.js"
+}

@@ -1,0 +1,51 @@
+@import '../../../assets/sass/utilities/mixins/index';
+@import '../../../assets/sass/utilities/variables/index';
+
+.tab-links {
+	margin-bottom: $block-bottom-margin-large;
+
+	// Intro heading
+	.tab-links-intro {
+		h2 {
+			color: $brand-teal;
+		}
+	}
+
+	// Individual tab link
+	.tab-links-item {
+		padding: rem(32);
+		border-top-right-radius: rem(42);
+		color: $color-white;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.9;
+		}
+
+		h3 {
+			color: $color-white;
+		}
+
+		// Color variants
+		&--teal {
+			background-color: $brand-teal;
+		}
+
+		&--teal-light {
+			background-color: $brand-teal-light;
+		}
+
+		&--green {
+			background-color: $brand-green-dark;
+		}
+
+		&--gold {
+			background-color: $brand-gold;
+		}
+
+		&--orange {
+			background-color: $brand-orange;
+		}
+	}
+
+}
