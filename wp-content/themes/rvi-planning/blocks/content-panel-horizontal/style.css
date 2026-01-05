@@ -38,7 +38,9 @@
   background-color: #FAA41A;
 }
 
-.content-panel-horizontal .the-content-panel.bg-panel-green h2, .content-panel-horizontal .the-content-panel.bg-panel-green p, .content-panel-horizontal .the-content-panel.bg-panel-green div {
+.content-panel-horizontal .the-content-panel.bg-panel-green h2,
+.content-panel-horizontal .the-content-panel.bg-panel-green p,
+.content-panel-horizontal .the-content-panel.bg-panel-green div {
   color: #fff;
 }
 
@@ -64,7 +66,9 @@
   background-color: #007C89;
 }
 
-.content-panel-horizontal .the-content-panel.bg-panel-teal h2, .content-panel-horizontal .the-content-panel.bg-panel-teal p, .content-panel-horizontal .the-content-panel.bg-panel-teal div {
+.content-panel-horizontal .the-content-panel.bg-panel-teal h2,
+.content-panel-horizontal .the-content-panel.bg-panel-teal p,
+.content-panel-horizontal .the-content-panel.bg-panel-teal div {
   color: #fff;
 }
 

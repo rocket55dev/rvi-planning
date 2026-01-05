@@ -1,6 +1,3 @@
-//@import '../../../assets/sass/utilities/mixins/index';
-//@import '../../../assets/sass/utilities/variables/index';
-
 .content-panel-horizontal {
 	margin-bottom: $block-bottom-margin-large;
 
@@ -39,14 +36,19 @@
 
 		&.bg-panel-green {
 			@include media($md) {
-				box-shadow: 20px 0px 0px 0px rgba(108,164,57,1) inset;
+				box-shadow: 20px 0px 0px 0px rgba(108, 164, 57, 1) inset;
 			}
+
 			.corner-tag {
 				background-color: $brand-gold;
 			}
-			h2, p, div {
+
+			h2,
+			p,
+			div {
 				color: $color-white;
 			}
+
 			ul {
 				list-style-type: square;
 
@@ -60,16 +62,22 @@
 				}
 			}
 		}
+
 		&.bg-panel-teal {
 			@include media($md) {
-				box-shadow: 20px 0px 0px 0px rgba(5,157,173,1) inset;
+				box-shadow: 20px 0px 0px 0px rgba(5, 157, 173, 1) inset;
 			}
+
 			.corner-tag {
 				background-color: $brand-teal-light;
 			}
-			h2, p, div {
+
+			h2,
+			p,
+			div {
 				color: $color-white;
 			}
+
 			ul {
 				list-style-type: square;
 

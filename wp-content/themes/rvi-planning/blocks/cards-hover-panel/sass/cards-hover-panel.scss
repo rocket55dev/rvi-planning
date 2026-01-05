@@ -1,36 +1,36 @@
-@import '../../../assets/sass/utilities/mixins/index';
-@import '../../../assets/sass/utilities/variables/index';
-
 .cards-hover-panel {
 	margin-bottom: $block-bottom-margin-large;
 
 	// Auto-apply panel colors to columns in order (light teal, teal, green, orange)
-	.the-cards > .card-item:nth-child(4n+1) {
+	.the-cards>.card-item:nth-child(4n+1) {
 		.hover-panel {
 			background-color: $brand-teal-light;
 		}
 	}
 
-	.the-cards > .card-item:nth-child(4n+2) {
+	.the-cards>.card-item:nth-child(4n+2) {
 		.hover-panel {
 			background-color: $brand-teal;
 		}
 	}
 
-	.the-cards > .card-item:nth-child(4n+3) {
+	.the-cards>.card-item:nth-child(4n+3) {
 		.hover-panel {
 			background-color: $brand-green-dark;
 		}
 	}
 
-	.the-cards > .card-item:nth-child(4n+4) {
+	.the-cards>.card-item:nth-child(4n+4) {
 		.hover-panel {
 			background-color: $brand-orange;
 		}
 	}
 
 	.hover-card {
-		&:hover, &:focus, &.panel-open {
+
+		&:hover,
+		&:focus,
+		&.panel-open {
 			.hover-panel-content {
 				max-height: rem(500);
 			}
@@ -51,8 +51,9 @@
 		transition: max-height 0.5s ease-in-out;
 
 	}
+
 	.hover-card-arrow {
-		background-color: rgba(0,0,0, 0.1);
+		background-color: rgba(0, 0, 0, 0.1);
 		bottom: rem(-24);
 		right: rem(-24);
 		padding: rem(8) rem(9);

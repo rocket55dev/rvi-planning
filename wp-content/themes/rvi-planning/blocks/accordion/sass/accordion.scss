@@ -1,6 +1,3 @@
-@import '../../../assets/sass/utilities/mixins/index';
-@import '../../../assets/sass/utilities/variables/index';
-
 .accordion-panel {
 	margin-bottom: $block-bottom-margin-large;
 
@@ -14,7 +11,7 @@
 	// Accordion items - override Bootstrap defaults
 	.accordion-item {
 		border: none;
-		border-top-right-radius: rem(42)!important;
+		border-top-right-radius: rem(42) !important;
 		margin-bottom: rem(4);
 
 		// Color variants

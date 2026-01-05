@@ -1,6 +1,3 @@
-//@import '../../../assets/sass/utilities/mixins/index';
-//@import '../../../assets/sass/utilities/variables/index';
-
 .image-cards {
 	margin-bottom: $block-bottom-margin-large;
 
@@ -25,13 +22,12 @@
 
 	// Dark gradient overlay
 	.image-card-overlay {
-		background: linear-gradient(
-			to top,
-			rgba(0, 0, 0, 0.8) 0%,
-			rgba(0, 0, 0, 0.4) 20.673%,
-			rgba(0, 0, 0, 0) 62.019%
-		);
+		background: linear-gradient(to top,
+				rgba(0, 0, 0, 0.8) 0%,
+				rgba(0, 0, 0, 0.4) 20.673%,
+				rgba(0, 0, 0, 0) 62.019%);
 	}
+
 	.image-card-content {
 		padding-top: rem(350)
 	}

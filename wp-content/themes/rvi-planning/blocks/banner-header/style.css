@@ -13,7 +13,10 @@
   background-color: #007C89;
 }
 
-.banner-header.bg-panel-teal .banner-content h1, .banner-header.bg-panel-teal .banner-content h2, .banner-header.bg-panel-teal .banner-content p, .banner-header.bg-panel-teal .banner-content div {
+.banner-header.bg-panel-teal .banner-content h1,
+.banner-header.bg-panel-teal .banner-content h2,
+.banner-header.bg-panel-teal .banner-content p,
+.banner-header.bg-panel-teal .banner-content div {
   color: #fff;
 }
 
@@ -21,7 +24,10 @@
   background-color: #FAA41A;
 }
 
-.banner-header.bg-panel-green .banner-content h1, .banner-header.bg-panel-green .banner-content h2, .banner-header.bg-panel-green .banner-content p, .banner-header.bg-panel-green .banner-content div {
+.banner-header.bg-panel-green .banner-content h1,
+.banner-header.bg-panel-green .banner-content h2,
+.banner-header.bg-panel-green .banner-content p,
+.banner-header.bg-panel-green .banner-content div {
   color: #fff;
 }
 
