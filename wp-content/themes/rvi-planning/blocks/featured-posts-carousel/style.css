@@ -69,14 +69,9 @@
   pointer-events: none;
 }
 
-.featured-posts-carousel .content-panel-decoration img {
-  width: 58.4375rem;
-  height: 41.0625rem;
-}
-
 .featured-posts-carousel .content-panel-decoration-top {
-  top: -32rem;
-  right: -33.75rem;
+  top: -27.5rem;
+  right: -20.625rem;
 }
 
 .featured-posts-carousel .content-panel-decoration-bottom {
